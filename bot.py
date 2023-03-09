@@ -129,7 +129,6 @@ async def main():
     storage = MemoryStorage()
     dp = Dispatcher(bot=bot, storage=storage)
     dp.register_message_handler(start, commands=["start"], state="*")
-    # dp.register_errors_handler(error_handler)
     registry = new_registry(dp)
 
     await dp.start_polling(bot)
